@@ -1,0 +1,253 @@
+/*ajustes generales*/
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: sans-serif;
+  padding: 70px 10px 0; }
+
+/*Probando import*/
+/*Probando variables*/
+header {
+  display: flex;
+  position: absolute;
+  height: 56px;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+/* EJEMPLO DE HEADER CON SASS
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .menu {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .logo {
+            color: white;
+        }
+        .nav {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            .buscador {
+                display: flex;
+                align-self: center;
+                justify-self: center;
+            }
+            .opc {
+                display: flex;
+                align-self: center;
+                justify-self: center;
+                
+                &:hover{
+                    background-color: $grey;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                }
+                .link {
+                    color: white;
+                    text-decoration: none;
+            }}
+        }
+    }
+}
+*/
+.main-index {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 200px repeat(2, 1fr) 200px;
+  grid-template-areas: "banner banner banner banner banner banner" "collection topcharts newreleases podcast podcast podcast " "tabla tabla tabla newsandevents newsandevents newsandevents" "banner-container-footer banner-container-footer banner-container-footer banner-container-footer banner-container-footer banner-container-footer";
+  row-gap: 10px;
+  column-gap: 10px; }
+  .main-index .banner-container {
+    grid-area: banner;
+    background-color: aquamarine; }
+  .main-index .titulo {
+    justify-content: center;
+    background-color: #000000;
+    color: #ffff;
+    font-family: 'Koulen', cursive;
+    padding: 10px; }
+  .main-index .collection {
+    grid-area: collection;
+    background-color: #000000; }
+    .main-index .collection .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+    .main-index .collection .bloque {
+      display: flex;
+      justify-content: center; }
+      .main-index .collection .bloque .slider {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 325px; }
+  .main-index .topcharts {
+    grid-area: topcharts;
+    background-color: #000000; }
+    .main-index .topcharts .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+    .main-index .topcharts .bloque {
+      display: flex;
+      justify-content: center; }
+      .main-index .topcharts .bloque .slider {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 325px; }
+  .main-index .newreleases {
+    grid-area: newreleases;
+    background-color: #000000; }
+    .main-index .newreleases .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+    .main-index .newreleases .bloque {
+      display: flex;
+      justify-content: center; }
+      .main-index .newreleases .bloque .slider {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 325px; }
+  .main-index .podcast {
+    grid-area: podcast;
+    background-color: #000000; }
+    .main-index .podcast .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+    .main-index .podcast .video {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center; }
+    .main-index .podcast .txt-descripcion {
+      color: white;
+      padding: 10px; }
+  .main-index .tabla {
+    grid-area: tabla;
+    background-color: #000000; }
+    .main-index .tabla .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+  .main-index .newsandevents {
+    grid-area: newsandevents;
+    background-color: #000000; }
+    .main-index .newsandevents .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: #ffff;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+    .main-index .newsandevents .video {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center; }
+    .main-index .newsandevents .txt-descripcion {
+      color: white;
+      padding: 10px; }
+  .main-index .banner-container-footer {
+    grid-area: banner-container-footer;
+    background-color: aquamarine; }
+    .main-index .banner-container-footer .titulo {
+      justify-content: center;
+      background-color: #000000;
+      color: white;
+      font-family: 'Koulen', cursive;
+      padding: 10px; }
+  .main-index .titulo {
+    justify-content: center;
+    background-color: #000000;
+    color: #ffff;
+    font-family: 'Koulen', cursive;
+    padding: 10px; }
+
+.titulo {
+  justify-content: center;
+  background-color: #000000;
+  color: white;
+  font-family: 'Koulen', cursive;
+  padding: 10px; }
+
+@media (max-width: 600px) {
+  .main-index {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: 200px repeat(6, 1fr) 200px;
+    grid-template-areas: "banner" "newreleases" "topcharts" "collection" "podcast" "newsandevents" "tabla" "banner-container-footer";
+    row-gap: 10px;
+    column-gap: 10px; } }
+
+/*
+@media only (max-width:1240px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: 200px repeat(4, 1fr) 200px;
+        grid-template-areas: 
+                            "banner banner banner "
+                            "collection topcharts newreleases"
+                            "podcast podcast podcast"
+                            "newsandevents newsandevents newsandevents"
+                            "tabla tabla tabla"
+                            "banner-container-footer banner-container-footer banner-container-footer";
+        row-gap: 10px;
+        column-gap: 10px;
+}
+}
+*/
+/*Probando import*/
+/*Probando variables*/
+.footer {
+  background-color: #000000;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0; }
+  .footer .link {
+    text-decoration: none;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 0 10px;
+    padding: 9px; }
+    .footer .link:hover {
+      background-color: #6B778D;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }

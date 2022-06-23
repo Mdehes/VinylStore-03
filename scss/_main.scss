@@ -1,0 +1,189 @@
+$black: #000000;
+$grey: #6B778D;
+$color1: #9DD6DF;
+$color2: #ffff;
+$bg1: #A084CF;
+
+@mixin estilotitulo ($color, $bg) {
+    justify-content: center;
+    background-color: $bg;
+    color: $color;
+    font-family: 'Koulen', cursive;
+    padding: 10px;
+}
+
+.main-index {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 200px repeat(2, 1fr) 200px;
+    grid-template-areas: 
+                        "banner banner banner banner banner banner"
+                        "collection topcharts newreleases podcast podcast podcast "
+                        "tabla tabla tabla newsandevents newsandevents newsandevents"
+                        "banner-container-footer banner-container-footer banner-container-footer banner-container-footer banner-container-footer banner-container-footer";
+    row-gap: 10px;
+    column-gap: 10px;
+    .banner-container {
+            grid-area: banner;
+            background-color: aquamarine;
+            }
+            .titulo {
+                @include estilotitulo($color2, $black)
+            }
+        .collection {
+                grid-area: collection;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+                .bloque{
+                    display: flex;
+                    justify-content: center;
+                    .slider{
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        width: 325px;
+                    }
+                }
+            }
+        .topcharts {
+                grid-area: topcharts;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+                .bloque{
+                    display: flex;
+                    justify-content: center;
+                    .slider{
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        width: 325px;
+                    }
+                }
+            }
+        .newreleases {
+                grid-area: newreleases;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+                .bloque{
+                    display: flex;
+                    justify-content: center;
+                    .slider{
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        width: 325px;
+                    }
+                }
+            }
+        .podcast {
+                grid-area: podcast;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+                .video {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    }
+                .txt-descripcion {
+                    color: white;
+                    padding: 10px;
+                }
+                
+            }
+        .tabla {
+                grid-area: tabla;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+            }
+        .newsandevents{
+                grid-area: newsandevents;
+                background-color: $black;
+                .titulo {
+                    @include estilotitulo($color2, $black)
+                }
+                .video {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    }
+                .txt-descripcion {
+                    color: white;
+                    padding: 10px;
+                }
+                
+            }
+        .banner-container-footer {
+                grid-area: banner-container-footer;
+                background-color: aquamarine;
+                .titulo {
+                    justify-content: center;
+                    background-color: $black;
+                    color: white;
+                    font-family: 'Koulen', cursive;
+                    padding: 10px;
+                }
+            }
+            .titulo {
+                @include estilotitulo($color2, $black)
+            }         
+}
+
+.titulo {
+    justify-content: center;
+    background-color: $black;
+    color: white;
+    font-family: 'Koulen', cursive;
+    padding: 10px;
+}
+
+@media (max-width:600px) {
+    .main-index {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        grid-template-rows: 200px repeat(6, 1fr) 200px;
+        grid-template-areas: 
+                            "banner"
+                            "newreleases"
+                            "topcharts"
+                            "collection"
+                            "podcast"
+                            "newsandevents"
+                            "tabla"
+                            "banner-container-footer";
+        row-gap: 10px;
+        column-gap: 10px;
+}
+}
+/*
+@media only (max-width:1240px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: 200px repeat(4, 1fr) 200px;
+        grid-template-areas: 
+                            "banner banner banner "
+                            "collection topcharts newreleases"
+                            "podcast podcast podcast"
+                            "newsandevents newsandevents newsandevents"
+                            "tabla tabla tabla"
+                            "banner-container-footer banner-container-footer banner-container-footer";
+        row-gap: 10px;
+        column-gap: 10px;
+}
+}
+*/
+

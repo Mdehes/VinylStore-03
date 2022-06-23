@@ -1,0 +1,60 @@
+/*Probando import*/
+/*Probando variables*/
+$black: #000000;
+$grey: #6B778D;
+
+header {
+    display: flex;
+    position:absolute;
+    height: 56px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* EJEMPLO DE HEADER CON SASS
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    .menu {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .logo {
+            color: white;
+        }
+        .nav {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            .buscador {
+                display: flex;
+                align-self: center;
+                justify-self: center;
+            }
+            .opc {
+                display: flex;
+                align-self: center;
+                justify-self: center;
+                
+                &:hover{
+                    background-color: $grey;
+                    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+                }
+                .link {
+                    color: white;
+                    text-decoration: none;
+            }}
+        }
+    }
+}
+*/
+
